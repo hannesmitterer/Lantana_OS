@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lantana OS | Command Center</title>
+    <style>
+        :root {
+            --neon: #00f2ff;
+            --gold: #ffd700;
+            --alert: #ff4b2b;
+            --bg: #05070a;
+            --surface: rgba(255, 255, 255, 0.03);
+        }
+        body { 
+            font-family: 'Space Mono', monospace; 
+            background: var(--bg); 
+            color: #fff; 
+            margin: 0; 
+            line-height: 1.5;
+        }
+        
+        /* Status Bar */
+        .status-bar { 
+            display: flex; 
+            justify-content: space-between; 
+            background: #111; 
+            padding: 8px 20px; 
+            font-size: 0.75rem; 
+            border-bottom: 1px solid #222;
+        }
+        .status-item span { color: var(--neon); font-weight: bold; }
+        .safe { color: #00ff00 !important; }
+
+        /* Header */
+        header { 
+            padding: 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            border-bottom: 1px solid var(--neon);
+        }
+        .seal-box { 
+            border: 1px solid var(--gold); 
+            padding: 10px 20px; 
+            color: var(--gold); 
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        /* Main Layout */
+        .dashboard-container { 
+            display: grid; 
+            grid-template-columns: 1.5fr 1fr; 
+            gap: 20px; 
+            padding: 20px; 
+        }
+
+        .card { 
+            background: var(--surface); 
+            border: 1px solid #222; 
+            padding: 20px; 
+            border-radius: 4px;
+        }
+        .card h2 { 
+            font-size: 1rem; 
+            margin-top: 0; 
+            color: var(--neon); 
+            text-transform: uppercase;
+        }
+
+        /* Metrics */
+        .metric-box { margin-bottom: 15px; }
+        .metric-label { font-size: 0.7rem; color: #888; display: block; }
+        .metric-value { font-size: 1.4rem; color: var(--gold); }
+
+        /* Shop Section */
+        .shop-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 15px; 
+        }
+        .product-card { 
+            border: 1px solid #333; 
+            background: #000; 
+            padding: 10px; 
+            text-align: center;
+        }
+        .product-card img { width: 100%; border-bottom: 1px solid #222; margin-bottom: 10px; }
+        .buy-btn { 
+            background: transparent; 
+            border: 1px solid var(--gold); 
+            color: var(--gold); 
+            width: 100%; 
+            padding: 8px; 
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        .buy-btn:hover { background: var(--gold); color: #000; }
+    </style>
+</head>
+<body>
+
+<div class="status-bar">
+    <div class="status-item">COORDINATOR: <span>0.043 Hz</span></div>
+    <div class="status-item">CODEQL: <span class="safe">0 ALERTS</span></div>
+    <div class="status-item">NSR VALIDATION: <span class="safe">PASSED</span></div>
+    <div class="status-item">BYZANTINE NODES: <span>7 ACTIVE</span></div>
+</div>
+
+<header>
+    <div class="brand">
+        <h1 style="margin:0; font-size: 1.8rem;">LANTANA <span style="font-weight:100">OS</span></h1>
+        <small style="color: var(--neon)">Resonance School Ecosystem</small>
+    </div>
+    <div class="seal-box">LEX AMORIS SIGNATURE</div>
+</header>
+
+<div class="dashboard-container">
+    <section class="card">
+        <h2>Node Monitoring & Ethics Engine</h2>
+        <div class="metric-box">
+            <span class="metric-label">Global Coherence Index</span>
+            <span class="metric-value">> 0.98</span>
+        </div>
+        <div style="background: #111; height: 200px; border: 1px solid #222; margin: 15px 0; display: flex; align-items: center; justify-content: center; color: #444;">
+            [REALTIME DATA STREAM: HYDRA-SYNC]
+        </div>
+        <p style="font-size: 0.8rem; color: #aaa;">
+            > Ethic Proposal ID #2026-X1 Accepted.<br>
+            > Zero manipulation detected in repository: <code>hannesmitterer/AI</code>.<br>
+            > Byzantine Fault Tolerance: <span class="safe">Stable</span>.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Lantana Merchandising</h2>
+        <div class="shop-grid">
+            <div class="product-card">
+                <span style="font-size: 0.7rem;">Kosymbiosis Set</span>
+                <button class="buy-btn">MINT NFT/BUY</button>
+            </div>
+            <div class="product-card">
+                <span style="font-size: 0.7rem;">Sailor Dry-Bag</span>
+                <button class="buy-btn">MINT NFT/BUY</button>
+            </div>
+            <div class="product-card">
+                <span style="font-size: 0.7rem;">NSR Backpack</span>
+                <button class="buy-btn">MINT NFT/BUY</button>
+            </div>
+            <div class="product-card">
+                <span style="font-size: 0.7rem;">Sacco Inverted</span>
+                <button class="buy-btn">MINT NFT/BUY</button>
+            </div>
+        </div>
+        <div style="margin-top: 20px; font-size: 0.7rem; color: var(--gold);">
+            *Tutti i proventi finanziano le missioni di risonanza.
+        </div>
+    </section>
+</div>
+
+<footer style="text-align:center; padding: 20px; color: #444; font-size: 0.7rem;">
+    Connected to hannesmitterer/nexus | Compiled with Hydra IPFS Automation | NSR Compliant
+</footer>
+
+</body>
+</html>
